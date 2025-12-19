@@ -6,7 +6,8 @@
 
 #include <iostream>
 #include <cmath>
-#include <vector>
+
+#include "kathrein_util.h"
 
 // speed of light (m/s) in vaccum(or in air, in approximation)
 const double c = 299796200;
