@@ -4,8 +4,6 @@
 // compile: 
 // g++ kathrein_util.cpp -o kathrein_util 
 
-#include <iostream>
-#include <cmath>
 
 #include "kathrein_util.h"
 

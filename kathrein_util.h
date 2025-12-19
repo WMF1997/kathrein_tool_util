@@ -1,6 +1,8 @@
 #ifndef KATHREIN_UTIL_H
 #define KATHREIN_UTIL_H
 
+#include <iostream>
+#include <cmath>
 #include <vector>
 
 double watts_2_dbm(double watts);
