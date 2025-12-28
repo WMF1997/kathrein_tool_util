@@ -29,4 +29,7 @@ export LD_LIBRARY_PATH=.
 
 ## 后续计划
 
-后续计划添加Python相关的绑定内容. 
+- [ ] 添加Python相关的绑定内容. 计划使用pybind11作为相应的基础库. 
+- [ ] <可选> 添加Makefile的相应编译构建流程
+- [ ] 添加CMake的相应编译构建流程
+
