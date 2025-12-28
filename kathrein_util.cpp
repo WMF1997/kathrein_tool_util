@@ -99,8 +99,8 @@ std::vector<double> reflection_conversion(double vswr) {
     // then, with the two waves' amptitude, we can get (vswr - 1) / (vswr + 1)
     std::vector<double> result;
 
-    double return_loss = 20 * log10((vswr+1)/(vswr-1));
-    double reflection_coeff = (vswr-1)/(vswr+1); // or, = power(10, -return_loss / 10);
+    double return_loss = 20 * log10((vswr + 1) / (vswr - 1));
+    double reflection_coeff = (vswr - 1) / (vswr + 1); // or, = power(10, -return_loss / 10);
     double reflected_power = reflection_coeff * reflection_coeff; // or, = power(10, -return_loss / 20);
 
     result.push_back(return_loss);
