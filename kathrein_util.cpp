@@ -2,8 +2,8 @@
 // kathrein scala division. 
 
 // compile: 
-// g++ kathrein_util.cpp -o kathrein_util 
-
+// g++ -fPIC -shared -O2 kathrein_util.cpp -o libkathrein_util.so 
+// g++ -O2 -L . main_test.cpp -lkathrein_util 
 
 #include "kathrein_util.h"
 

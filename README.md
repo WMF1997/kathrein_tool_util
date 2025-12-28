@@ -18,9 +18,13 @@ https://www.bilibili.com/opus/676797317380046903
 ## 这段代码的编译
 
 ```bash
-g++ kathrein_util.cpp -o kathrein_util 
+g++ -fPIC -shared -O2 kathrein_util.cpp -o libkathrein_util.so # 生成相应的动态库
+g++ -O2 -L . main_test.cpp -lkathrein_util # 将结果添加上
 ```
 
-另外, 后续他人使用的时候, 可以在编译条件改为`-fPIC`的方式, 将编译结果改为动态库. 
+在执行相应可执行文件的时候, 需要调整`LD_LIBRARY_PATH`, 用于找到`libkathrein_util.so`的位置. 例如
+```bash
+export LD_LIBRARY_PATH=.
+```
 
 
