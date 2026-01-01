@@ -17,19 +17,21 @@ https://www.bilibili.com/opus/676797317380046903
 
 ## 这段代码的编译
 
-```bash
-g++ -fPIC -shared -O2 kathrein_util.cpp -o libkathrein_util.so # 生成相应的动态库
-g++ -O2 -L . main_test.cpp -lkathrein_util # 将结果添加上
-```
+可以直接使用cmake进行编译. 也可以使用自己单独编写的makefile进行编译. 
 
-在执行相应可执行文件的时候, 需要调整`LD_LIBRARY_PATH`, 用于找到`libkathrein_util.so`的位置. 例如
+如果是使用cmake的话, 会在`${CMAKE_BINARY_DIR}/bin`和`${CMAKE_BINARY_DIR}/lib`有相应的编译产物, 直接使用/执行即可. 不需要任何其他的操作. 
+
+但是, 如果使用单独编写的makefile, 在完成编译后, 要执行相应可执行文件的时候, 需要调整设置`LD_LIBRARY_PATH`, 用于获得`libkathrein_util.so`的对应文件夹路径, 例如如果在`out`文件夹下, 执行:
+
 ```bash
 export LD_LIBRARY_PATH=.
 ```
 
 ## 后续计划
 
+- [x] 调整目录组织结构
+- [x] 添加CMake的相应编译构建流程
+- [x] <可选> 添加Makefile的相应编译构建流程
 - [ ] 添加Python相关的绑定内容. 计划使用pybind11作为相应的基础库. 
-- [ ] <可选> 添加Makefile的相应编译构建流程
-- [ ] 添加CMake的相应编译构建流程
+
 
