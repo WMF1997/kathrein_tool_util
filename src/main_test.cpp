@@ -1,7 +1,7 @@
 #include "kathrein_util.h"
 
 // test cases in main function 
-int main(void) {
+int main(int argc, const char** argc, const char** env) {
     // dbm to watts 
     int dbm = 30;
     int watts = 2;
