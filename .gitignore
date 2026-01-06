@@ -40,4 +40,7 @@
 # for cmake-based builds
 build/*
 # for specific builds
-out/* 
+out/*
+
+# for git push 
+gitpush.sh 
