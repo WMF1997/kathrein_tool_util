@@ -21,7 +21,7 @@ https://www.bilibili.com/opus/676797317380046903
 
 如果是使用cmake的话, 会在`${CMAKE_BINARY_DIR}/bin`和`${CMAKE_BINARY_DIR}/lib`有相应的编译产物, 直接使用/执行即可. 不需要任何其他的操作. 
 
-但是, 如果使用单独编写的makefile, 在完成编译后, 要执行相应可执行文件的时候, 需要调整设置`LD_LIBRARY_PATH`, 用于获得`libkathrein_util.so`的对应文件夹路径, 例如如果在`out`文件夹下, 执行:
+但是, 如果使用单独编写的Makefile, 在完成编译后, 要执行相应可执行文件的时候, 需要调整设置`LD_LIBRARY_PATH`, 用于获得`libkathrein_util.so`的对应文件夹路径, 例如如果在`out`文件夹下, 执行:
 
 ```bash
 export LD_LIBRARY_PATH=.
