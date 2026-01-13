@@ -27,11 +27,26 @@ https://www.bilibili.com/opus/676797317380046903
 export LD_LIBRARY_PATH=.
 ```
 
+## 编译生成pybind11的Python绑定 
+
+可以参考下面这段编译指令. (在`src/`目录下执行):
+
+```bash 
+g++ \
+    -shared -O2 -fPIC -ffast-math -march=native \
+    -I /home/wmf1997/python313/lib/python3.13/site-packages/pybind11/include \
+    -I /home/wmf1997/.local/share/uv/python/cpython-3.13.2-linux-x86_64-gnu/include/python3.13 \
+    -I ../include \
+    kathrein_util.cpp \
+    kathrein_util_pybind11.cpp \
+    -o kathrein_util_pybind11.so
+```
+
 ## 后续计划
 
 - [x] 调整目录组织结构
 - [x] 添加CMake的相应编译构建流程
 - [x] <可选> 添加Makefile的相应编译构建流程
-- [x] 添加Python相关的绑定内容. 计划使用pybind11作为相应的基础库. (现在尝试添加了一个稍微简单的, 不使用CMake的版本, 使用纯g++编译的结果)
+- [x] 添加Python相关的绑定内容. 计划使用pybind11作为相应的基础库. (现在尝试添加了一个稍微简单的, 不使用CMake的版本, 使用纯g++命令编译的结果)
 
 
