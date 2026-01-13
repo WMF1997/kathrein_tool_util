@@ -42,5 +42,8 @@ build/*
 # for specific builds
 out/*
 
+# for vscode
+.vscode/
+
 # for git push 
 gitpush.sh 
