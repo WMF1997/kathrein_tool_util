@@ -47,3 +47,8 @@ out/*
 
 # for git push 
 gitpush.sh 
+
+# setup.py build results
+kathrein_util_pybind11.egg-info/*
+
+dist/*

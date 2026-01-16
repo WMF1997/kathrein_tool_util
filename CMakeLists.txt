@@ -32,3 +32,17 @@ target_include_directories(kathrein_util_exec PUBLIC include)
 
 # 链接库
 target_link_libraries(kathrein_util_exec kathrein_util) 
+
+# 查找并且配置pybind11
+set(pybind11_DIR /home/wmf1997/python313/lib/python3.13/site-packages/pybind11/share/cmake/pybind11)
+find_package(pybind11 REQUIRED)
+
+# 创建pybind11的绑定库
+pybind11_add_module(kathrein_util_pybind11 src/kathrein_util_pybind11.cpp) 
+
+# 链接主库到pybind11模块
+# 将之前编译完成的相应so文件, 进行链接
+target_link_libraries(kathrein_util_pybind11 PRIVATE kathrein_util)
+
+# 设置 pybind11 模块的包含目录
+target_include_directories(kathrein_util_pybind11 PUBLIC include)

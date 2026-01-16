@@ -42,6 +42,8 @@ g++ \
     -o kathrein_util_pybind11.so
 ```
 
+现在已经完成了相应的cmake绑定了. 同时也尝试通过大模型, 添加了相应的setup.py内容. 
+
 ## 后续计划
 
 - [x] 调整目录组织结构
