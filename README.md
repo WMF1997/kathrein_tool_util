@@ -13,7 +13,7 @@ https://www.bilibili.com/opus/676797317380046903
 ## 相应工具的链接
  
 链接: https://pan.baidu.com/s/11tzpD5OJDqmkLRXuFZmXlQ 提取码: 3594  
-需要注意的是, Reflection Conversion Table功能, 需要依赖于MSCOMCTL.OCX这个ActiveX控件, 可以上网按照相应步骤进行配置, 配置之后就可以使用了. (记得Windows 10没问题, Windows 11不确定要怎么弄)
+需要注意的是, Reflection Conversion Table功能, 需要依赖于`MSCOMCTL.OCX`这个ActiveX控件, 可以上网按照相应步骤进行配置, 配置之后就可以使用了. (记得Windows 10没问题, Windows 11不确定要怎么弄)
 
 ## 这段代码的编译
 
@@ -42,13 +42,13 @@ g++ \
     -o kathrein_util_pybind11.so
 ```
 
-现在已经完成了相应的cmake绑定了. 同时也尝试通过大模型, 添加了相应的setup.py内容. 
+现在已经完成了相应的cmake绑定了. 
+
+也尝试通过大模型, 添加了相应的setup.py内容. 
 
 ## 后续计划
 
-- [x] 调整目录组织结构
-- [x] 添加CMake的相应编译构建流程
-- [x] <可选> 添加Makefile的相应编译构建流程
-- [x] 添加Python相关的绑定内容. 计划使用pybind11作为相应的基础库. (现在尝试添加了一个稍微简单的, 不使用CMake的版本, 使用纯g++命令编译的结果)
+- [ ] 进一步完善CMake的相应编译构建流程
+- [ ] 看下`setup.py`的相应内容, 是否可以进一步调整. 
 
 
